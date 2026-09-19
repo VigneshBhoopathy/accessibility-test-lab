@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f6f8;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #17324d;
+  color: white;
+  padding: 16px 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+.hero {
+  margin: 32px 0;
+  padding: 42px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.eyebrow {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .8rem;
+}
+
+.card {
+  background: white;
+  margin: 24px 0;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.form-group {
+  margin: 18px 0;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  max-width: 520px;
+  padding: 12px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button,
+.fake-button {
+  display: inline-block;
+  margin: 8px 6px 8px 0;
+  padding: 11px 18px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.primary-button {
+  background: #075985;
+  color: white;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+  border-color: #374151;
+}
+
+.icon-button {
+  background: #ddd;
+}
+
+.status {
+  min-height: 1.5em;
+  font-weight: 600;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.low-contrast {
+  background: #eeeeee;
+  color: #cccccc;
+  padding: 20px;
+  margin: 12px 0;
+}
+
+.good-contrast {
+  background: #17324d;
+  color: white;
+  padding: 20px;
+  margin: 12px 0;
+}
+
+.fake-button {
+  background: #b91c1c;
+  color: white;
+}
+
+.fake-button:hover {
+  background: #991b1b;
+}
+
+a {
+  color: #075985;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 28px 0;
+  background: #17324d;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 26px;
+  }
+}
