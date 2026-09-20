@@ -2,15 +2,53 @@
 <html lang="en">
 
 <head>
-    <title>Accessibility Test Lab</title>   ← Page title
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accessibility Test Lab</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">A11y Test Lab</div>
+
+      <nav aria-label="Main navigation">
+        <a href="#forms">Forms</a>
+        <a href="#images">Images</a>
+        <a href="#contrast">Contrast</a>
+        <a href="#keyboard">Keyboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
     <section class="hero">
 
-        <h1>Accessibility Test Lab</h1>      ← Main heading
+      <p class="eyebrow">
+        Playwright Accessibility Testing Practice
+      </p>
+
+      <h1>Accessibility Test Lab</h1>
+
+      <p>
+        Use this page to practice finding accessibility defects
+        using custom Playwright accessibility rules.
+      </p>
+
+      <button id="testButton" class="primary-button">
+        Run Demo Action
+      </button>
+
+      <p id="statusMessage" class="status" aria-live="polite"></p>
 
     </section>
 
+  </main>
+
 </body>
+</html>
