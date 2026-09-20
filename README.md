@@ -41,3 +41,6 @@ The page intentionally contains defects such as:
 - non-semantic interactive element
 
 Some rules reported by axe can vary with the axe-core version and browser.
+
+# accessibility-test-lab
+Accessibility testing practice website for Playwright and axe-core
