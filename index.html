@@ -64,8 +64,56 @@
 
       <p id="statusMessage" class="status" aria-live="polite"></p>
 
+
+      
     </section>
 
+```html
+<section aria-labelledby="images-heading">
+  <h2 id="images-heading">Image Accessibility Testing</h2>
+
+  <div class="image-test-container">
+
+    <!-- 1. VALID ALT - Should PASS -->
+    <div>
+      <h3>Image 1 - Valid Alt</h3>
+      <img
+        src="https://via.placeholder.com/300x150"
+        alt="A sample landscape image"
+        width="300"
+        height="150"
+      >
+      <p>Expected result: PASS</p>
+    </div>
+
+    <!-- 2. EMPTY ALT - Should FAIL -->
+    <div>
+      <h3>Image 2 - Empty Alt</h3>
+      <img
+        src="https://via.placeholder.com/300x150"
+        alt=""
+        width="300"
+        height="150"
+      >
+      <p>Expected result: FAIL</p>
+    </div>
+
+    <!-- 3. NO ALT ATTRIBUTE - Should FAIL -->
+    <div>
+      <h3>Image 3 - No Alt Attribute</h3>
+      <img
+        src="https://via.placeholder.com/300x150"
+        width="300"
+        height="150"
+      >
+      <p>Expected result: FAIL</p>
+    </div>
+
+  </div>
+</section>
+```
+
+    
   </main>
 
 </body>
