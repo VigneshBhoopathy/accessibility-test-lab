@@ -12,16 +12,20 @@
 
 <body>
 
-  <!-- Skip to Main Content -->
-  <!-- TC1: PASS - Skip link is present -->
-  <!-- TC2: PASS - Skip link is the first focusable control -->
-  <!-- TC3: PASS - Skip link points to #maincontent -->
+  <!-- ================================================= -->
+  <!-- BYPASS BLOCKS - TC1 PASS                          -->
+  <!-- Skip to main content link is present              -->
+  <!-- ================================================= -->
+
   <a href="#maincontent" class="skip-link">
     Skip to main content
   </a>
 
 
-  <!-- Header -->
+  <!-- ================================================= -->
+  <!-- HEADER                                            -->
+  <!-- ================================================= -->
+
   <header class="site-header">
 
     <div class="container">
@@ -30,7 +34,9 @@
         A11y Test Lab
       </div>
 
+
       <!-- Main Navigation -->
+
       <nav aria-label="Main navigation">
 
         <a href="#forms">Forms</a>
@@ -52,20 +58,13 @@
   <!-- MAIN CONTENT                                      -->
   <!-- ================================================= -->
 
-  <!--
-    INTENTIONAL DEFECT FOR TC4
-
-    The main element has the correct ID,
-    but tabindex="-1" is intentionally missing.
-
-    Therefore the Playwright test should detect
-    that focus does not move to maincontent.
-  -->
-
-  <main id="maincontent" class="container">
+  <main id="maincontent" class="container" tabindex="-1">
 
 
-    <!-- Hero Section -->
+    <!-- ================================================= -->
+    <!-- HERO SECTION                                     -->
+    <!-- ================================================= -->
+
     <section class="hero">
 
       <p class="eyebrow">
@@ -158,7 +157,9 @@
       <div class="image-test-container">
 
 
-        <!-- 1. VALID ALT -->
+        <!-- ============================================= -->
+        <!-- IMAGE 1 - VALID ALT                           -->
+        <!-- ============================================= -->
 
         <div>
 
@@ -180,7 +181,9 @@
         </div>
 
 
-        <!-- 2. EMPTY ALT -->
+        <!-- ============================================= -->
+        <!-- IMAGE 2 - EMPTY ALT                           -->
+        <!-- ============================================= -->
 
         <div>
 
@@ -202,7 +205,9 @@
         </div>
 
 
-        <!-- 3. NO ALT -->
+        <!-- ============================================= -->
+        <!-- IMAGE 3 - NO ALT ATTRIBUTE                    -->
+        <!-- ============================================= -->
 
         <div>
 
