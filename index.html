@@ -12,47 +12,97 @@
 
 <body>
 
-  <!-- Skip link -->
+  <!-- Skip to Main Content -->
+  <!-- TC1: PASS - Skip link is present -->
+  <!-- TC2: PASS - Skip link is the first focusable control -->
+  <!-- TC3: PASS - Skip link points to #maincontent -->
   <a href="#maincontent" class="skip-link">
     Skip to main content
   </a>
 
+
+  <!-- Header -->
   <header class="site-header">
+
     <div class="container">
 
-      <div class="logo">A11y Test Lab</div>
+      <div class="logo">
+        A11y Test Lab
+      </div>
 
+      <!-- Main Navigation -->
       <nav aria-label="Main navigation">
+
         <a href="#forms">Forms</a>
+
         <a href="#images">Images</a>
+
         <a href="#contrast">Contrast</a>
+
         <a href="#keyboard">Keyboard</a>
+
       </nav>
 
     </div>
+
   </header>
 
-  <!-- INTENTIONAL DEFECT FOR TC4 -->
+
+  <!-- ================================================= -->
+  <!-- MAIN CONTENT                                      -->
+  <!-- ================================================= -->
+
+  <!--
+    INTENTIONAL DEFECT FOR TC4
+
+    The main element has the correct ID,
+    but tabindex="-1" is intentionally missing.
+
+    Therefore the Playwright test should detect
+    that focus does not move to maincontent.
+  -->
+
   <main id="maincontent" class="container">
 
+
+    <!-- Hero Section -->
     <section class="hero">
 
       <p class="eyebrow">
         Playwright Accessibility Testing Practice
       </p>
 
-      <h1>Accessibility Test Lab</h1>
+
+      <h1>
+        Accessibility Test Lab
+      </h1>
+
+
+      <!-- Heading hierarchy testing -->
+
+      <h2>
+        Heading 2 Accessibility Test Lab
+      </h2>
+
+      <h2>
+        Heading 2.1 Accessibility Test Lab
+      </h2>
+
+      <h4>
+        Heading 2.1 Accessibility Test Lab
+      </h4>
+
+      <h4>
+        Heading 2.1 Accessibility Test Lab
+      </h4>
+
+
+      <!-- Description -->
 
       <p>
         Use this page to practice finding accessibility defects
         using custom Playwright accessibility rules.
       </p>
-
-    </section>
-
-  </main>
-
-</body>
 
       <p>
         AAUse this page to practice finding accessibility defects
@@ -65,7 +115,8 @@
       </p>
 
 
-      <!-- Language of parts testing -->
+      <!-- Language of Parts testing -->
+
       <p>
         My name is <span>விக்னேஷ்</span>.
       </p>
@@ -75,30 +126,45 @@
       </p>
 
 
-      <!-- Button testing -->
-      <button id="testButton" class="primary-button">
+      <!-- Button -->
+
+      <button
+        id="testButton"
+        class="primary-button">
         Run Demo Action
       </button>
 
-      <p id="statusMessage" class="status" aria-live="polite"></p>
+
+      <p
+        id="statusMessage"
+        class="status"
+        aria-live="polite">
+      </p>
 
     </section>
 
 
-    <!-- Image Accessibility Testing -->
+    <!-- ================================================= -->
+    <!-- IMAGE ACCESSIBILITY TESTING                       -->
+    <!-- ================================================= -->
+
     <section aria-labelledby="images-heading">
 
       <h2 id="images-heading">
         Image Accessibility Testing
       </h2>
 
+
       <div class="image-test-container">
 
 
-        <!-- 1. VALID ALT - Should PASS -->
+        <!-- 1. VALID ALT -->
+
         <div>
 
-          <h3>Image 1 - Valid Alt</h3>
+          <h3>
+            Image 1 - Valid Alt
+          </h3>
 
           <img
             src="https://via.placeholder.com/300x150"
@@ -114,10 +180,13 @@
         </div>
 
 
-        <!-- 2. EMPTY ALT - Should FAIL -->
+        <!-- 2. EMPTY ALT -->
+
         <div>
 
-          <h3>Image 2 - Empty Alt</h3>
+          <h3>
+            Image 2 - Empty Alt
+          </h3>
 
           <img
             src="https://via.placeholder.com/300x150"
@@ -133,10 +202,13 @@
         </div>
 
 
-        <!-- 3. NO ALT ATTRIBUTE - Should FAIL -->
+        <!-- 3. NO ALT -->
+
         <div>
 
-          <h3>Image 3 - No Alt Attribute</h3>
+          <h3>
+            Image 3 - No Alt Attribute
+          </h3>
 
           <img
             src="https://via.placeholder.com/300x150"
