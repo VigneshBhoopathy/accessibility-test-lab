@@ -12,18 +12,16 @@
 
 <body>
 
-  <!-- Skip link - INTENTIONAL DEFECT for BYPASS-003 -->
-  <a href="#wrongtarget" class="skip-link">
+  <!-- Skip link -->
+  <a href="#maincontent" class="skip-link">
     Skip to main content
   </a>
 
   <header class="site-header">
     <div class="container">
 
-
       <div class="logo">A11y Test Lab</div>
 
-      <!-- Main Navigation -->
       <nav aria-label="Main navigation">
         <a href="#forms">Forms</a>
         <a href="#images">Images</a>
@@ -34,26 +32,27 @@
     </div>
   </header>
 
+  <!-- INTENTIONAL DEFECT FOR TC4 -->
+  <main id="maincontent" class="container">
 
-  
+    <section class="hero">
+
+      <p class="eyebrow">
+        Playwright Accessibility Testing Practice
+      </p>
 
       <h1>Accessibility Test Lab</h1>
 
-      <!-- Heading hierarchy testing -->
-      <h2>Heading 2 Accessibility Test Lab</h2>
-
-      <h2>Heading 2.1 Accessibility Test Lab</h2>
-
-      <h4>Heading 2.1 Accessibility Test Lab</h4>
-
-      <h4>Heading 2.1 Accessibility Test Lab</h4>
-
-
-      <!-- Description -->
       <p>
         Use this page to practice finding accessibility defects
         using custom Playwright accessibility rules.
       </p>
+
+    </section>
+
+  </main>
+
+</body>
 
       <p>
         AAUse this page to practice finding accessibility defects
