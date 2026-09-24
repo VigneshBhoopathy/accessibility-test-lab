@@ -12,21 +12,33 @@
 
 <body>
 
+  <!-- Skip link for keyboard users -->
+  <a href="#maincontent" class="skip-link">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
+
       <div class="logo">A11y Test Lab</div>
 
+      <!-- Main Navigation -->
       <nav aria-label="Main navigation">
         <a href="#forms">Forms</a>
         <a href="#images">Images</a>
         <a href="#contrast">Contrast</a>
         <a href="#keyboard">Keyboard</a>
       </nav>
+
     </div>
   </header>
 
-  <main class="container">
 
+  <!-- Main Content -->
+  <main id="maincontent" class="container" tabindex="-1">
+
+    <!-- Hero Section -->
     <section class="hero">
 
       <p class="eyebrow">
@@ -35,17 +47,23 @@
 
       <h1>Accessibility Test Lab</h1>
 
+      <!-- Heading hierarchy testing -->
       <h2>Heading 2 Accessibility Test Lab</h2>
+
       <h2>Heading 2.1 Accessibility Test Lab</h2>
+
       <h4>Heading 2.1 Accessibility Test Lab</h4>
-<h4>Heading 2.1 Accessibility Test Lab</h4>
+
+      <h4>Heading 2.1 Accessibility Test Lab</h4>
 
 
+      <!-- Description -->
       <p>
         Use this page to practice finding accessibility defects
         using custom Playwright accessibility rules.
       </p>
-<p>
+
+      <p>
         AAUse this page to practice finding accessibility defects
         using custom Playwright accessibility rules.
       </p>
@@ -55,66 +73,100 @@
         using custom Playwright accessibility rules.
       </p>
 
-      <p>My name is <span>விக்னேஷ்</span>.</p>
 
-      <p>My name is <span>வநேஹா</span>.</p>
+      <!-- Language of parts testing -->
+      <p>
+        My name is <span>விக்னேஷ்</span>.
+      </p>
+
+      <p>
+        My name is <span>வநேஹா</span>.
+      </p>
+
+
+      <!-- Button testing -->
       <button id="testButton" class="primary-button">
         Run Demo Action
       </button>
 
       <p id="statusMessage" class="status" aria-live="polite"></p>
 
-
-      
     </section>
 
-```html
-<section aria-labelledby="images-heading">
-  <h2 id="images-heading">Image Accessibility Testing</h2>
 
-  <div class="image-test-container">
+    <!-- Image Accessibility Testing -->
+    <section aria-labelledby="images-heading">
 
-    <!-- 1. VALID ALT - Should PASS -->
-    <div>
-      <h3>Image 1 - Valid Alt</h3>
-      <img
-        src="https://via.placeholder.com/300x150"
-        alt="A sample landscape image"
-        width="300"
-        height="150"
-      >
-      <p>Expected result: PASS</p>
-    </div>
+      <h2 id="images-heading">
+        Image Accessibility Testing
+      </h2>
 
-    <!-- 2. EMPTY ALT - Should FAIL -->
-    <div>
-      <h3>Image 2 - Empty Alt</h3>
-      <img
-        src="https://via.placeholder.com/300x150"
-        alt=""
-        width="300"
-        height="150"
-      >
-      <p>Expected result: FAIL</p>
-    </div>
+      <div class="image-test-container">
 
-    <!-- 3. NO ALT ATTRIBUTE - Should FAIL -->
-    <div>
-      <h3>Image 3 - No Alt Attribute</h3>
-      <img
-        src="https://via.placeholder.com/300x150"
-        width="300"
-        height="150"
-      >
-      <p>Expected result: FAIL</p>
-    </div>
 
-  </div>
-</section>
-```
+        <!-- 1. VALID ALT - Should PASS -->
+        <div>
 
-    
+          <h3>Image 1 - Valid Alt</h3>
+
+          <img
+            src="https://via.placeholder.com/300x150"
+            alt="A sample landscape image"
+            width="300"
+            height="150"
+          >
+
+          <p>
+            Expected result: PASS
+          </p>
+
+        </div>
+
+
+        <!-- 2. EMPTY ALT - Should FAIL -->
+        <div>
+
+          <h3>Image 2 - Empty Alt</h3>
+
+          <img
+            src="https://via.placeholder.com/300x150"
+            alt=""
+            width="300"
+            height="150"
+          >
+
+          <p>
+            Expected result: FAIL
+          </p>
+
+        </div>
+
+
+        <!-- 3. NO ALT ATTRIBUTE - Should FAIL -->
+        <div>
+
+          <h3>Image 3 - No Alt Attribute</h3>
+
+          <img
+            src="https://via.placeholder.com/300x150"
+            width="300"
+            height="150"
+          >
+
+          <p>
+            Expected result: FAIL
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
   </main>
 
 </body>
+
 </html>
