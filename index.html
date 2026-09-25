@@ -12,20 +12,81 @@
 
 <body>
 
+  <!-- ================================================= -->
+  <!-- BYPASS BLOCKS                                     -->
+  <!-- ================================================= -->
+
+  <!--
+    BYPASS-001:
+    Skip link exists
+
+    BYPASS-002:
+    Skip link is the first focusable control
+
+    BYPASS-003:
+    Skip link points to #maincontent
+
+    BYPASS-004:
+    JavaScript moves focus to main content
+  -->
+
+  <a
+    href="#maincontent"
+    class="skip-link"
+    id="skipLink">
+    Skip to main content
+  </a>
+
+
+
+
+
+
+
+
+  
+  <!-- ================================================= -->
+  <!-- HEADER                                            -->
+  <!-- ================================================= -->
+
   <header class="site-header">
+
     <div class="container">
-      <div class="logo">A11y Test Lab</div>
+
+      <div class="logo">
+        A11y Test Lab
+      </div>
 
       <nav aria-label="Main navigation">
+
         <a href="#forms">Forms</a>
+
         <a href="#images">Images</a>
+
         <a href="#contrast">Contrast</a>
+
         <a href="#keyboard">Keyboard</a>
+
       </nav>
+
     </div>
+
   </header>
 
-  <main class="container">
+
+  <!-- ================================================= -->
+  <!-- MAIN CONTENT                                      -->
+  <!-- ================================================= -->
+
+  <main
+    id="maincontent"
+    class="container"
+    tabindex="-1">
+
+
+    <!-- ================================================= -->
+    <!-- HERO SECTION                                     -->
+    <!-- ================================================= -->
 
     <section class="hero">
 
@@ -33,11 +94,24 @@
         Playwright Accessibility Testing Practice
       </p>
 
-      <h1>Accessibility Test Lab</h1>
+      <h1>
+        Accessibility Test Lab
+      </h1>
 
-      <h2>Heading 2 Accessibility Test Lab</h2>
-      <h2>Heading 2.1 Accessibility Test Lab</h2>
 
+      <!-- Heading hierarchy -->
+
+      <h2>
+        Heading 2 Accessibility Test Lab
+      </h2>
+
+      <h3>
+        Heading 3 Accessibility Test Lab
+      </h3>
+
+      <h4>
+        Heading 4 Accessibility Test Lab
+      </h4>
 
 
       <p>
@@ -45,15 +119,220 @@
         using custom Playwright accessibility rules.
       </p>
 
-      <button id="testButton" class="primary-button">
+      <p>
+        This page contains examples for accessibility testing
+        using Playwright.
+      </p>
+
+
+      <!-- Language of Parts -->
+
+      <p>
+        My name is
+        <span lang="ta">விக்னேஷ்</span>.
+      </p>
+
+      <p>
+        My name is
+        <span lang="ta">வநேஹா</span>.
+      </p>
+
+
+      <!-- Demo button -->
+
+      <button
+        id="testButton"
+        class="primary-button">
         Run Demo Action
       </button>
 
-      <p id="statusMessage" class="status" aria-live="polite"></p>
+
+      <p
+        id="statusMessage"
+        class="status"
+        aria-live="polite">
+      </p>
+
+    </section>
+<!-- ================================================= -->
+<!-- LABEL TESTING                                     -->
+<!-- ================================================= -->
+
+<section
+  id="forms"
+  aria-labelledby="forms-heading">
+
+  <h2 id="forms-heading">
+    Form Label Accessibility Testing
+  </h2>
+
+  <p>
+    Enter your first name below.
+  </p>
+
+  <!-- LABEL-001 FAILURE -->
+  <input
+    type="text"
+    id="firstname"
+    name="firstname">
+
+</section>
+
+    <!-- ================================================= -->
+    <!-- IMAGE ACCESSIBILITY TESTING                       -->
+    <!-- ================================================= -->
+
+    <section
+      id="images"
+      aria-labelledby="images-heading">
+
+      <h2 id="images-heading">
+        Image Accessibility Testing
+      </h2>
+
+
+      <div class="image-test-container">
+
+
+        <!-- Image 1 -->
+
+        <div>
+
+          <h3>
+            Image 1 - Valid Alt
+          </h3>
+
+          <img
+            src="https://via.placeholder.com/300x150"
+            alt="A sample landscape image"
+            width="300"
+            height="150">
+
+          <p>
+            Image has meaningful alternative text.
+          </p>
+
+        </div>
+
+
+        <!-- Image 2 -->
+
+        <div>
+
+          <h3>
+            Image 2 - Decorative Image
+          </h3>
+
+          <img
+            src="https://via.placeholder.com/300x150"
+            alt=""
+            width="300"
+            height="150">
+
+          <p>
+            This image is intentionally decorative.
+          </p>
+
+        </div>
+
+
+      </div>
 
     </section>
 
+
+    <!-- ================================================= -->
+    <!-- FORMS SECTION                                    -->
+    <!-- ================================================= -->
+
+    <section
+      id="forms"
+      aria-labelledby="forms-heading">
+
+      <h2 id="forms-heading">
+        Forms
+      </h2>
+
+      <label for="name">
+        Name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        name="name">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- CONTRAST SECTION                                 -->
+    <!-- ================================================= -->
+
+    <section
+      id="contrast"
+      aria-labelledby="contrast-heading">
+
+      <h2 id="contrast-heading">
+        Contrast
+      </h2>
+
+      <p>
+        This section can be used for colour contrast testing.
+      </p>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- KEYBOARD SECTION                                 -->
+    <!-- ================================================= -->
+
+    <section
+      id="keyboard"
+      aria-labelledby="keyboard-heading">
+
+      <h2 id="keyboard-heading">
+        Keyboard Accessibility
+      </h2>
+
+      <p>
+        Use the Tab key to move through the interactive
+        controls on this page.
+      </p>
+
+    </section>
+
+
   </main>
 
+
+  <!-- ================================================= -->
+  <!-- BYPASS BLOCKS - FOCUS SCRIPT                      -->
+  <!-- ================================================= -->
+
+  <script>
+
+    const skipLink = document.getElementById("skipLink");
+
+    const mainContent = document.getElementById("maincontent");
+
+
+    skipLink.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      mainContent.focus();
+
+      window.location.hash = "maincontent";
+
+    });
+
+  </script>
+
+
 </body>
+
 </html>
+
+
