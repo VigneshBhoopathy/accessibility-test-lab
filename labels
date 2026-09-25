@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Labels Accessibility Test</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <div class="logo">
+        Labels Accessibility Test
+      </div>
+
+      <nav aria-label="Main navigation">
+
+        <a href="#no-label">
+          No Label
+        </a>
+
+        <a href="#empty-label">
+          Empty Label
+        </a>
+
+        <a href="#unclear-label">
+          Unclear Label
+        </a>
+
+        <a href="#incorrect-label">
+          Incorrect Label
+        </a>
+
+        <a href="#required-field">
+          Required Field
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+    <h1>
+      Labels Accessibility Test Page
+    </h1>
+
+    <p>
+      This page contains intentional label accessibility
+      defects for Playwright testing.
+    </p>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-001 : NO LABEL                              -->
+    <!-- ================================================= -->
+
+    <section id="no-label">
+
+      <h2>
+        LABEL-001 - Input Without Label
+      </h2>
+
+      <p>
+        This input has no associated label.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <input
+        type="text"
+        id="firstname"
+        name="firstname">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-002 : EMPTY LABEL                           -->
+    <!-- ================================================= -->
+
+    <section id="empty-label">
+
+      <h2>
+        LABEL-002 - Empty Label
+      </h2>
+
+      <p>
+        This input has a label, but the label contains
+        no descriptive text.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <label for="lastname"></label>
+
+      <input
+        type="text"
+        id="lastname"
+        name="lastname">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-003 : UNCLEAR LABEL                         -->
+    <!-- ================================================= -->
+
+    <section id="unclear-label">
+
+      <h2>
+        LABEL-003 - Unclear Label
+      </h2>
+
+      <p>
+        The label does not clearly describe what information
+        should be entered.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <label for="email">
+        Enter
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-004 : INCORRECT LABEL                       -->
+    <!-- ================================================= -->
+
+    <section id="incorrect-label">
+
+      <h2>
+        LABEL-004 - Incorrect Label
+      </h2>
+
+      <p>
+        The label does not accurately describe the purpose
+        of the input.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <label for="phone">
+        First name
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-005 : REQUIRED STATE NOT CLEAR              -->
+    <!-- ================================================= -->
+
+    <section id="required-field">
+
+      <h2>
+        LABEL-005 - Required Field
+      </h2>
+
+      <p>
+        This field is required, but the label does not
+        communicate that information.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <label for="address">
+        Address
+      </label>
+
+      <input
+        type="text"
+        id="address"
+        name="address"
+        required>
+
+    </section>
+
+
+  </main>
+
+</body>
+
+</html>
