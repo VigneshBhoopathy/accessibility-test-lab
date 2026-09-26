@@ -87,7 +87,55 @@
 
     </section>
 
+<!-- ================================================= -->
+    <!-- LABEL-001aa : INPUT WITHOUT LABEL                  -->
+    <!-- ================================================= -->
 
+    <section id="no-label">
+
+      <h2>
+        LABEL-001aa - Input Without Label
+      </h2>
+
+      <p>
+        This input has no associated label.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <input
+        type="text"
+        id="firstname"
+        name="firstname">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LABEL-002 : EMPTY LABEL                          -->
+    <!-- ================================================= -->
+
+    <section id="empty-label">
+
+      <h2>
+        LABEL-002 - Empty Label
+      </h2>
+
+      <p>
+        This input has an associated label, but the label
+        contains no descriptive text.
+      </p>
+
+      <!-- INTENTIONAL FAILURE -->
+
+      <label for="lastname"></label>
+
+      <input
+        type="text"
+        id="lastname"
+        name="lastname">
+
+    </section>
 
   </main>
 
