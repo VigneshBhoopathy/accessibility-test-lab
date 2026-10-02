@@ -187,27 +187,6 @@ footer {
   }
 }
 
-/* ================================================= */
-/* CONTRAST TESTING                                  */
-/* ================================================= */
-
-/* Large text - intentional failure */
-
-.contrast-large {
-  font-size: 24px;
-  color: #aaaaaa;
-  background-color: #ffffff;
-}
-
-
-/* Normal/small text - intentional failure */
-
-.contrast-small {
-  font-size: 16px;
-  color: #aaaaaa;
-  background-color: #ffffff;
-}
-
 
 /* Normal text - intentional pass */
 
