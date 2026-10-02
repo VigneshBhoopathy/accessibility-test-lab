@@ -266,10 +266,10 @@
 
 
     <!-- ================================================= -->
-    <!-- CONTRAST SECTION    testing                              -->
-    <!-- ================================================= -->
+<!-- CONTRAST SECTION                                 -->
+<!-- ================================================= -->
 
-    <section
+<section
   id="contrast"
   aria-labelledby="contrast-heading">
 
@@ -277,38 +277,60 @@
     Contrast
   </h2>
 
-  <!-- LARGE TEXT CONTRAST FAILURE -->
 
-  <p class="contrast-large-fail">
-    Contrast - Large text
+  <!-- =============================================== -->
+  <!-- LARGE TEXT - INTENTIONAL FAILURE               -->
+  <!-- =============================================== -->
+
+  <p
+    style="
+      font-size: 24px;
+      color: #aaaaaa;
+      background-color: #ffffff;
+    ">
+    This is large text with insufficient colour contrast.
   </p>
-<p
-  style="
-    font-size: 24px;
-    color: #aaaaaa;
-    background-color: #ffffff;
-  ">
-  This is large text with insufficient colour contrast FFFFF.
-</p>
 
-  <!-- SMALL TEXT CONTRAST FAILURE -->
 
-  <p class="contrast-small-fail">
-    This section can be used for colour contrast testing.
+  <!-- =============================================== -->
+  <!-- SMALL / NORMAL TEXT - INTENTIONAL FAILURE      -->
+  <!-- =============================================== -->
+
+  <p
+    style="
+      font-size: 16px;
+      color: #aaaaaa;
+      background-color: #ffffff;
+    ">
+    This is normal text with insufficient colour contrast.
   </p>
-<p
-  style="
-    font-size: 16px;
-    color: #aaaaaa;
-    background-color: #ffffff;
-  ">
-  This is normal text with insufficient colour contrast FAILLLL.
-</p>
 
-  <!-- NORMAL TEXT THAT SHOULD PASS -->
 
-  <p class="contrast-pass">
-    This text has sufficient colour contrast.
+  <!-- =============================================== -->
+  <!-- LARGE TEXT - PASS                               -->
+  <!-- =============================================== -->
+
+  <p
+    style="
+      font-size: 24px;
+      color: #000000;
+      background-color: #ffffff;
+    ">
+    This is large text with sufficient colour contrast.
+  </p>
+
+
+  <!-- =============================================== -->
+  <!-- SMALL / NORMAL TEXT - PASS                     -->
+  <!-- =============================================== -->
+
+  <p
+    style="
+      font-size: 16px;
+      color: #000000;
+      background-color: #ffffff;
+    ">
+    This is normal text with sufficient colour contrast.
   </p>
 
 </section>
