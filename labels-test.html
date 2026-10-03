@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +9,12 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>Labels Accessibility Test</title> 
+  <title>Labels Accessibility Test</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>  
+<body>
 
   <header class="site-header">
 
@@ -43,6 +44,18 @@
 
         <a href="#required-field">
           Required Field
+        </a>
+
+        <a href="#correct-label">
+          Correct Label
+        </a>
+
+        <a href="#icon">
+          Icon
+        </a>
+
+        <a href="#radio-button">
+          Radio Button
         </a>
 
       </nav>
@@ -202,29 +215,132 @@
         required>
 
     </section>
-<section id="correct-label">
 
-  <h2>
-    LABEL-006 - Correctly Labelled Input
-  </h2>
 
-  <p>
-    This input has a clear and correctly associated label.
-  </p>
+    <!-- ================================================= -->
+    <!-- LABEL-006 : CORRECTLY LABELLED INPUT             -->
+    <!-- ================================================= -->
 
-  <label for="city">
-    City
-  </label>
+    <section id="correct-label">
 
-  <input
-    type="text"
-    id="city"
-    name="city">
+      <h2>
+        LABEL-006 - Correctly Labelled Input
+      </h2>
 
-</section>
+      <p>
+        This input has a clear and correctly associated label.
+      </p>
+
+      <label for="city">
+        City
+      </label>
+
+      <input
+        type="text"
+        id="city"
+        name="city">
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- 7. ICON : INTERACTIVE ICON                      -->
+    <!-- ================================================= -->
+
+    <section id="icon">
+
+      <h2>
+        7. Icon - Interactive Icon
+      </h2>
+
+      <p>
+        This icon is an interactive button. It can be
+        activated using the mouse or keyboard.
+      </p>
+
+      <button
+        type="button"
+        id="infoIcon"
+        aria-label="Show information"
+        onclick="alert('Information icon activated')">
+
+        ℹ️
+
+      </button>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- 8. RADIO BUTTON : INTERACTIVE RADIO BUTTONS     -->
+    <!-- ================================================= -->
+
+    <section id="radio-button">
+
+      <h2>
+        8. Radio Button - Interactive Radio Group
+      </h2>
+
+      <p>
+        Select your preferred contact method.
+      </p>
+
+      <fieldset>
+
+        <legend>
+          Preferred Contact Method
+        </legend>
+
+        <div>
+
+          <input
+            type="radio"
+            id="contact-email"
+            name="contact-method"
+            value="email">
+
+          <label for="contact-email">
+            Email
+          </label>
+
+        </div>
+
+        <div>
+
+          <input
+            type="radio"
+            id="contact-phone"
+            name="contact-method"
+            value="phone">
+
+          <label for="contact-phone">
+            Phone
+          </label>
+
+        </div>
+
+        <div>
+
+          <input
+            type="radio"
+            id="contact-sms"
+            name="contact-method"
+            value="sms">
+
+          <label for="contact-sms">
+            SMS
+          </label>
+
+        </div>
+
+      </fieldset>
+
+    </section>
+
 
   </main>
 
 </body>
 
 </html>
+```
